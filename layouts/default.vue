@@ -1,9 +1,21 @@
 <template>
   <div>
+    <app-header>
+
+    </app-header>
     <Nuxt />
   </div>
+  
 </template>
+<script>
+ import AppHeader from '~/components/Header';
 
+ export default {
+   components: {
+     AppHeader
+   }
+ }
+    </script>
 <style>
 html {
   font-family:
