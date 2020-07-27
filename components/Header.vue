@@ -3,7 +3,7 @@
          <logo style="width: 50px"/>
         <div style="flex: 1;" /> 
         <drz-menu/>
-        <div style="margin-left: 20px">LOGIN</div>
+        <a href="../login"><div style="margin-left: 20px">LOGIN</div></a>
     
  </div>
 </template>
