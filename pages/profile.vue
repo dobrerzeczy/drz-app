@@ -43,7 +43,6 @@ html
 {
     height: 100%;
     width: 100%;
-    background-color: gray;
 }
 
 .avatar
@@ -59,7 +58,7 @@ html
     display: flex;
     padding: 2%;
     height: 50%;
-    background-color: red;
+    background-color: gray;
 }
 .info2
 {
