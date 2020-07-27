@@ -2,12 +2,18 @@
   <div>
     <app-header />
     <Nuxt />
-    <app-footer />
   </div>
+  
 </template>
+<script>
+ import AppHeader from '~/components/Header';
 
-
-
+ export default {
+   components: {
+     AppHeader
+   }
+ }
+    </script>
 <style>
 html {
   font-family:
