@@ -3,8 +3,8 @@
         <div class="profile">
             
             <div class="avatar">
-                AVATAR
                 
+                <div class="avatarimg"><h1>AVATAR</h1></div>
                     
             </div>
             
@@ -32,6 +32,7 @@ html
 }
 .container
 {
+    background-color: lightblue;
     padding: 5px;
     display: flexbox;
     border: black solid 4px;
@@ -47,9 +48,10 @@ html
 
 .avatar
 {
+    display: flex;
     height: 50%;
     width: 22%;
-    background-color: green;
+    padding: 2%;
     float: left;
 }
 
@@ -58,14 +60,12 @@ html
     display: flex;
     padding: 2%;
     height: 50%;
-    background-color: gray;
 }
 .info2
 {
     display: flex;
     padding: 2%;
     height: 50%;
-    background-color: rgb(60, 255, 0);
 }
 .tekst
 {
@@ -73,6 +73,16 @@ html
     border: black solid 3px;
     height: 100%;
     width : 100%;
+    background-color: white;
+
+}
+.avatarimg
+{
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    border: black solid 3px;
+
     background-color: white;
 
 }
