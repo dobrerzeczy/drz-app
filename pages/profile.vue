@@ -38,7 +38,7 @@ html
     border: black solid 4px;
     margin: 5%;
     width: 90%;
-    height: 600px;
+    height: 800px;
 }
 .profile
 {
@@ -50,7 +50,7 @@ html
 {
     display: flex;
     height: 50%;
-    width: 22%;
+    width: 25%;
     padding: 2%;
     float: left;
 }
