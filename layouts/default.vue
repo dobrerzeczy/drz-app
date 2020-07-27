@@ -1,19 +1,21 @@
 <template>
   <div>
-    <app-menu />
+    <app-header>
+
+    </app-header>
     <Nuxt />
   </div>
+  
 </template>
 <script>
-import AppMenu from '~/components/Menu'
+ import AppHeader from '~/components/Header';
 
-export default {
-  components: {
-    AppMenu
-  }
-}
-</script>
-
+ export default {
+   components: {
+     AppHeader
+   }
+ }
+    </script>
 <style>
 html {
   font-family:
