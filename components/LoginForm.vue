@@ -17,15 +17,19 @@
 export default {
     data() {
         return  {
-        username: "",
-        password: "",
-        loggingIn: false
-    }
+          username: "",
+          password: "",
+        }
+    },
+    props:{
+      loggingIn: {
+        type: Boolean,
+        required: true
+      }
     },
     methods:{
         handleLogin()
         {
-            this.loggingIn = true;
             const { username, password } = this;
             //this.$router.push("/")
             this.$emit('loginData', { username, password })
