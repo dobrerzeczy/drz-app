@@ -1,12 +1,16 @@
 <template>
     <div>
-        <label for="inputLogin">Login</label>
+        <label for="inputRegister">Choose username</label>
         <br>
-        <input type="text" id="inputLogin" name="inputLogin" placeholder="login" v-model="username">
+        <input type="text" id="inputRegister" name="inputRegister" placeholder="login" v-model="username">
         <br>
         <label for="inputPassword">Password</label>
         <br>
         <input type="password" id="inputPassword" name="inputPassword" placeholder="password" v-model="password">
+        <br>
+        <label for="inputPasswordConfirm">Confirm password</label>
+        <br>
+        <input type="password" id="inputPassword" name="inputPasswordConfirm" placeholder="password" v-model="passwordConfirm">
         <br>
         <button @click="handleLogin">Sign In</button>
     </div>
@@ -22,8 +26,7 @@ export default {
     methods:{
         handleLogin()
         {
-            //this.$router.push("/")
-            this.$emit('login-data', {login: this.username, password: this.password})
+            this.$router.push("/")
         }
     }
 }
