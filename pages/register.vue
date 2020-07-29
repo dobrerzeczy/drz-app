@@ -1,9 +1,11 @@
 <template>
     <div>
+      <div class="registerForm">
         <register-form @registerData='handleRegister($event)' :logging-in="loggingIn"/>
         {{username}}
         {{password}}
-     </div>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -14,19 +16,17 @@ import RegisterForm from   '~/components/RegisterForm.vue'
 export default {
   components: {
     RegisterForm
-  },
-  
+  }, 
   data() {
     return {
       loggingIn: false,
-      username: "",
-      password: "",
+      username: '',
+      password: '',
       lastName: '',
       firstName: '',
       age: ''
     }
   },
- 
   methods: {
     async handleRegister({ username, password, firstName, lastName, age }) {
         this.loggingIn = true
@@ -42,7 +42,14 @@ export default {
         this.$router.push('/users');
         }
     }
-
-  
 }
 </script>
+<style scoped>
+  .registerForm{
+    text-align: center;
+    float: left;
+    margin-left: 40%;
+    padding: 40px;
+    width: 100% + 30px;
+  }
+</style>
