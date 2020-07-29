@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div>
     <app-header />
-    <div><Nuxt /></div>
-    <app-footer class="footer" />
+    <Nuxt />
+    <app-footer />
   </div>
   
 </template>
@@ -20,19 +20,7 @@ export default {
 </script>
 
 <style>
-.footer {
-    flex-shrink: 0;
-}
-html, body {
-  height: 100%;
-}
-.container {
-  flex: 1 0 auto;
-}
-body {
-  display: flex;
-  flex-direction: column;
-}
+
 html {
   font-family:
     'Source Sans Pro',
@@ -49,8 +37,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  height: 100%;
+  box-sizing: border-box; 
 }
 
 *,
