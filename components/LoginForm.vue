@@ -8,7 +8,7 @@
         <br>
         <input type="password" id="inputPassword" name="inputPassword" placeholder="password" v-model="password">
         <br>
-        <button @click="handleLogin">Sign In</button>
+        <button @click="handleLogin(username, password)">Sign In</button>
     </div>
 </template>
 <script>
@@ -20,10 +20,10 @@ export default {
     }
     },
     methods:{
-        handleLogin()
+        handleLogin(username, password)
         {
             //this.$router.push("/")
-            this.$emit('login-data', {login: this.username, password: this.password})
+            this.$emit('login-data', [username, password])
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <login-form v-on:loginData="login-data"/>
+        <login-form v-on:login-data='sendLoginData($event)'></login-form>
      </div>
 </template>
 
@@ -16,6 +16,12 @@ export default {
  components: {
      LoginForm
  },
+ methods:{
+     sendLoginData(loginData)
+     {
+         console.log(loginData)
+     }
+ }
 
 }
 
