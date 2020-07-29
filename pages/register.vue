@@ -1,6 +1,6 @@
 <template>
     <div>
-        <register-form @registerData='addRegisterData($event)' :logging-in="loggingIn"/>
+        <register-form @registerData='handleRegister($event)' :logging-in="loggingIn"/>
         {{username}}
         {{password}}
      </div>
@@ -25,20 +25,26 @@ export default {
   },
  
   methods: {
-    async addRegisterData({username, password, firstname, lastname, age}) {
-      this.loggingIn = true;
-      /*
-      1. button disabled
-      2. sign in -> signing in
-       */
-       const { data } = await api.post('/users', {username, password, firstname, lastname, age});
-
-      console.log(data);
-
-      this.loggingIn = false;
-
+    async handleRegister() {
+        this.loggingIn = true;
+            const { 
+                username,
+                firstName,
+                lastName,
+                age,
+                password
+            } = this;
+            await api.post('/users/', {
+                username,
+                password,
+                age,
+                firstName,
+                lastName
+            });
+        this.loggingIn = false;
+        this.$router.push('/users');
+        }
     }
-  },
 
   
 }

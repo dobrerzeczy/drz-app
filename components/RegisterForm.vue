@@ -2,11 +2,11 @@
     <div>
         <label for="inputFirstname">Firstname</label>
         <br>
-        <input type="text" id="inputFirstname" name="inputFirstname" placeholder="firstname" v-model="firstname">
+        <input type="text" id="inputFirstname" name="inputFirstname" placeholder="firstname" v-model="firstName">
         <br>
         <label for="inputLastname">Lastname</label>
         <br>
-        <input type="text" id="inputLastname" name="inputLastname" placeholder="lastname" v-model="lastname">
+        <input type="text" id="inputLastname" name="inputLastname" placeholder="lastname" v-model="lastName">
         <br>
         <label for="inputAge">Age</label>
         <br>
@@ -27,7 +27,7 @@
     <button @click="handleRegister" :disabled='loggingIn || 
     password != confirmPassword || password == "" || 
     username =="" || username == password ||
-    !age || !firstname || !lastname' ><p v-if="!loggingIn" >Sign In</p><p v-if="loggingIn">Signing In</p></button>
+    !age || !firstName || !lastName' ><p v-if="!loggingIn" >Sign In</p><p v-if="loggingIn">Signing In</p></button>
         {{wrongPassword}}
     </div>
     
@@ -40,8 +40,8 @@ export default {
           password: "",
           confirmPassword: "",
           wrongPassword: '',
-          firstname: '',
-          lastname:'',
+          firstName: '',
+          lastName:'',
           age: '',
         }
     },
@@ -55,9 +55,9 @@ export default {
         handleRegister()
         {
             if(this.password === this.confirmPassword){
-            const { username, password, firstname, lastname, age } = this;
+            const { username, password, firstName, lastName, age } = this;
             //this.$router.push("/")
-            this.$emit('registerData', { username, password, firstname, lastname, age })
+            this.$emit('registerData', { username, password, firstName, lastName, age })
             }
             else{
             this.wrongPassword = 'Passwords do not match'

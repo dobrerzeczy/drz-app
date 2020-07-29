@@ -28,10 +28,10 @@ export default {
         async handleRegister() {
             const { 
                 username,
-firstName,
-lastName,
-age,
-password
+                firstName,
+                lastName,
+                age,
+                password
             } = this;
             await api.post('/users/', {
                 username,
