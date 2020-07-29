@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style>
+
 html {
   font-family:
     'Source Sans Pro',
@@ -36,7 +37,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 *,

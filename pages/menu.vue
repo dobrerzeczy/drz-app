@@ -1,3 +1,5 @@
 <template>
-    <div>Nasza karta</div>
+    <div>Nasza karta
+
+    </div>
 </template>
