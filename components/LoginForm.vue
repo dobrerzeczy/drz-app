@@ -22,7 +22,8 @@ export default {
     methods:{
         handleLogin()
         {
-            this.$router.push("/")
+            //this.$router.push("/")
+            this.$emit('loginData' [this.username, this.password])
         }
     }
 }
