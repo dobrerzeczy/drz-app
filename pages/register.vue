@@ -25,18 +25,18 @@ export default {
   },
  
   methods: {
-    async addRegisterData({username, password}) {
+    async addRegisterData({username, password, firstname, lastname, age}) {
       this.loggingIn = true;
       /*
       1. button disabled
       2. sign in -> signing in
        */
-      /*const { data } = await api.post('/register', {username, password});
+       const { data } = await api.post('/users', {username, password, firstname, lastname, age});
 
       console.log(data);
 
       this.loggingIn = false;
-*/
+
     }
   },
 

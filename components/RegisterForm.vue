@@ -1,5 +1,17 @@
 <template>
     <div>
+        <label for="inputFirstname">Firstname</label>
+        <br>
+        <input type="text" id="inputFirstname" name="inputFirstname" placeholder="firstname" v-model="firstname">
+        <br>
+        <label for="inputLastname">Lastname</label>
+        <br>
+        <input type="text" id="inputLastname" name="inputLastname" placeholder="lastname" v-model="lastname">
+        <br>
+        <label for="inputAge">Age</label>
+        <br>
+        <input type="number" id="inputAge" name="inputAge" placeholder="age" v-model="age" >
+        <br>
         <label for="inputLogin">Login</label>
         <br>
         <input type="text" id="inputLogin" name="inputLogin" placeholder="login" v-model="username">
@@ -12,7 +24,10 @@
         <br>
         <input type="password" id="inputConfirmPassword" name="inputConfirmPassword" placeholder="Confirm password" v-model="confirmPassword">
         <br>
-    <button @click="handleRegister" :disabled= 'loggingIn || password != confirmPassword || password == "" || username ==""' ><p v-if="!loggingIn" >Sign In</p><p v-if="loggingIn">Signing In</p></button>
+    <button @click="handleRegister" :disabled='loggingIn || 
+    password != confirmPassword || password == "" || 
+    username =="" || username == password ||
+    !age || !firstname || !lastname' ><p v-if="!loggingIn" >Sign In</p><p v-if="loggingIn">Signing In</p></button>
         {{wrongPassword}}
     </div>
     
@@ -25,7 +40,9 @@ export default {
           password: "",
           confirmPassword: "",
           wrongPassword: '',
-
+          firstname: '',
+          lastname:'',
+          age: '',
         }
     },
     props:{
@@ -38,9 +55,9 @@ export default {
         handleRegister()
         {
             if(this.password === this.confirmPassword){
-            const { username, password } = this;
+            const { username, password, firstname, lastname, age } = this;
             //this.$router.push("/")
-            this.$emit('registerData', { username, password })
+            this.$emit('registerData', { username, password, firstname, lastname, age })
             }
             else{
             this.wrongPassword = 'Passwords do not match'
