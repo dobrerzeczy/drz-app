@@ -7,20 +7,18 @@
   
 </template>
 <script>
- import AppHeader from '~/components/Header'
- import AppFooter from '~/components/Footer'
+import api from '~/api';
+import AppHeader from '~/components/Header'
+import AppFooter from '~/components/Footer'
 
+export default {
+  components: {
+    AppHeader,
+    AppFooter
+  }
+}
+</script>
 
- export default {
-   components: {
-     AppHeader,
-     AppFooter
-   }
- }
-
-
- 
-    </script>
 <style>
 html {
   font-family:
