@@ -21,19 +21,16 @@ export default {
       loggingIn: false,
       username: "",
       password: "",
+      lastName: '',
+      firstName: '',
+      age: ''
     }
   },
  
   methods: {
-    async handleRegister() {
-        this.loggingIn = true;
-            const { 
-                username,
-                firstName,
-                lastName,
-                age,
-                password
-            } = this;
+    async handleRegister({ username, password, firstName, lastName, age }) {
+        this.loggingIn = true
+
             await api.post('/users/', {
                 username,
                 password,
