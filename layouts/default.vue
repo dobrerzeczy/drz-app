@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="container">
     <app-header />
-    <Nuxt />
+    <div class="nuxt-container"><Nuxt /></div>
     <app-footer />
   </div>
   
@@ -20,7 +20,16 @@ export default {
 </script>
 
 <style>
-
+#__nuxt, #__layout, #container {
+  height: 100%;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+}
+.nuxt-container {
+  flex: 1;
+}
 html {
   font-family:
     'Source Sans Pro',
