@@ -1,6 +1,6 @@
 <template>
     <div>
-        <login-form @loginData='addLoginData($event)' :logging-in="loggingIn"/>
+        <register-form @registerData='addRegisterData($event)' :logging-in="loggingIn"/>
         {{username}}
         {{password}}
      </div>
@@ -9,11 +9,11 @@
 <script>
 import api from '~/api';
 
-import LoginForm from   '~/components/LoginForm.vue'
+import RegisterForm from   '~/components/RegisterForm.vue'
 
 export default {
   components: {
-    LoginForm
+    RegisterForm
   },
   
   data() {
@@ -25,18 +25,18 @@ export default {
   },
  
   methods: {
-    async addLoginData({username, password}) {
+    async addRegisterData({username, password}) {
       this.loggingIn = true;
       /*
       1. button disabled
       2. sign in -> signing in
        */
-      const { data } = await api.post('/login', {username, password});
+      /*const { data } = await api.post('/register', {username, password});
 
       console.log(data);
 
       this.loggingIn = false;
-
+*/
     }
   },
 

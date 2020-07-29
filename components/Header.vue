@@ -4,6 +4,7 @@
         <div style="flex: 1;" /> 
         <drz-menu/>
         <a href="../login"><div style="margin-left: 20px">LOGIN</div></a>
+        <a href="../register"><div style="margin-left: 20px">REGISTER</div></a>
     
  </div>
 </template>
