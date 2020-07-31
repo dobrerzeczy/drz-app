@@ -30,6 +30,15 @@ app.post(`/addPost`, (req, res) => {
     if(req)
     {
         console.log(`ktos dodaje post!`)
-        Post.create({Post: req.body.newPost}, (err, result))
+        Post.create({Post: req.body.newPost}, (err, result) => {
+            if(err)
+            {
+                console.log(err);
+            }
+            else if(result)
+            {
+                console.log(result);
+            }
+        })
     }
 })
