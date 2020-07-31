@@ -7,6 +7,23 @@
       <a href="/authors/chmura" class="btn btn-secondary">chmura</a>
     </div>
 
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Authors</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ subpage }}</li>
+      </ol>
+    </nav>
+
     <nuxt-child />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    subpage() {
+      return this.$route.path.replace('/authors/', '');
+    }
+  }
+}
+</script>
