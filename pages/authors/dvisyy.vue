@@ -1,13 +1,9 @@
 <template>
     <div>
         hej
-             <div class="post" v-for="post in posts">
-                <h1> {{ post.title }} </h1>
-                <h4> {{ post.content }} </h4>
-                <div> {{ post.created }} </div>
-             </div>
+            <author-posts :posts-to-show="posts" />
     </div>
-</template>>
+</template>
 
 <style scoped>
 .post {
@@ -18,7 +14,13 @@
 </style>
 
 <script>
+import AuthorPosts from '~/components/dvisyy/AuthorPosts';
+
 export default {
+    components: {
+        AuthorPosts
+    },
+
     data() {
         return {
             posts: [
