@@ -1,15 +1,22 @@
 <template>
     <div>
-        <div class="post" v-for="post in posts">
-            <h1>{{post.title}}</h1>
-            <h4>{{post.created}}</h4>
-            <div>{{post.content}}</div>
-        </div>
+        <form method="POST" action="http://localhost:3001/addPost">
+
+            <input type="text" name="newPost" />
+            <button type="submit">Wyslij</button>
+        </form>
+
+        <author-posts :posts-to-show="posts" />
+
     </div>
 </template>
 
 <script>
+import AuthorPosts from '~/components/stachu/AuthorPosts';
 export default {
+    components: {
+        AuthorPosts,
+    },
     data() {
         return {
             posts: [
@@ -31,16 +38,10 @@ export default {
 
 
             ]
+            
+
+
         };
     }
 }
 </script>
-
-<style>
-.post
-{
-    padding: 10px;
-    margin: 10px;
-    border: 1px dashed green;
-}
-</style>
