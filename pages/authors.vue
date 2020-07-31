@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="btn-group" role="group" aria-label="Basic example">
       <a href="/authors/stachu" class="btn btn-primary">stachu</a>
       <a href="/authors/tymox" class="btn btn-primary">tymox</a>
