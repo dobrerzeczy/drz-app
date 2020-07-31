@@ -1,10 +1,6 @@
 <template>
-    <div> 
-        <div class="post" v-for= "post in posts"> 
-            <h1>{{post.title}}</h1>
-            <h4>{{post.created}}</h4>
-            <div>{{post.content}}</div>
-        </div>
+    <div>
+        <author-posts :posts-to-show="posts" />    
     </div>
 </template>
 
@@ -19,25 +15,29 @@
 
 
 <script>
+import AuthorPosts from '~/components/tymox/AuthorPosts';
+
 export default {
-    data() {
+    components: {
+        AuthorPosts
+    },
+
+      data() {
         return {
-            posts:[
+            posts: [
                 {
-                title: 'Flat earth',
-                content: 'Yesterday, the Flat Earth movement has lost a dear friend.',
-                created: '5 czerwca',
                 
-                title: 'Earth',
-                content: 'earth is big',
-                created:'6 czerwca',
-                
-                title: 'other planets',
-                content: 'lots of other palnets',
-                created: '7 czerwca',
-
-
-
+                    title: 'Flat earth',
+                    content: 'Yesterday, the Flat Earth movement has lost a dear friend.',
+                    created: '5 czerwca',
+                },{
+                    title: 'Earth',
+                    content: 'earth is big',
+                    created:'6 czerwca',
+                },{
+                    title: 'other planets',
+                    content: 'lots of other palnets',
+                    created: '7 czerwca',
                 }
 
             ]
