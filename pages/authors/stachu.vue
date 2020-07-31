@@ -2,7 +2,7 @@
     <div>
         <form method="POST" action="http://localhost:3001/addPost">
 
-            <input type="text" name="newPost" />
+            <input type="text" name="newPost" v-model="Text" />
             <button type="submit">Wyslij</button>
         </form>
 
@@ -54,3 +54,7 @@ export default {
     }
 }
 </script>
+
+<style>
+
+</style>

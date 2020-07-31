@@ -3,9 +3,11 @@ const mongoURL = `mongodb://localhost:27017/PROJEKTT`
 
 
 mongoose.connect(mongoURL, {
-useCreateIndex: true,
-useNewUrlParser: true,
-useUnifiedTopology: true,
+
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    
 }, (error, done) => {
     if(error)
     {
