@@ -9,3 +9,13 @@
     <nuxt-child />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    subpage() {
+      return this.$route.path;
+    }
+  }
+}
+</script>
