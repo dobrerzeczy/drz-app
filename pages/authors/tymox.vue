@@ -2,8 +2,8 @@
     <div> 
         <div class="post" v-for= "post in posts"> 
             <h1>{{post.title}}</h1>
-            <h4>{{post.date}}</h4>
-            <div>{{post.created}}</div>
+            <h4>{{post.created}}</h4>
+            <div>{{post.content}}</div>
         </div>
     </div>
 </template>
