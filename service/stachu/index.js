@@ -42,3 +42,9 @@ app.post(`/addPost`, (req, res) => {
         })
     }
 })
+
+app.get(`/Posts`, async (req, res) => {
+    const Posts = await Post.find({}).exec();
+
+    res.json(Posts);
+})
