@@ -4,16 +4,26 @@
 
             <input type="text" name="newPost" v-model="Text" />
             <button type="submit">Wyslij</button>
+            {{Text}}
         </form>
 
         <author-posts :posts-to-show="posts" />
 
-        
+        <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+</nav>
 
     </div>
 </template>
 
 <script>
+import app from '~/service/stachu/api'
 import AuthorPosts from '~/components/stachu/AuthorPosts';
 export default {
     components: {
@@ -21,6 +31,7 @@ export default {
     },
     data() {
         return {
+            Text: '',
             posts: [
                 {
                     title: `Pierwszy tytuł ;p`,
@@ -49,7 +60,7 @@ export default {
     {
         mounted()
         {
-            fetch (`http://localhost:3001/Posts`)
+            
         }
     }
 }
