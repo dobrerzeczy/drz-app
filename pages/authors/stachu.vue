@@ -8,6 +8,8 @@
 
         <author-posts :posts-to-show="posts" />
 
+        
+
     </div>
 </template>
 
@@ -42,6 +44,13 @@ export default {
 
 
         };
+    },
+    methods:
+    {
+        mounted()
+        {
+            fetch (`http://localhost:3001/Posts`)
+        }
     }
 }
 </script>
