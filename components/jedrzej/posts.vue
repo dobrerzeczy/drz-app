@@ -1,18 +1,23 @@
 <template>
     <div>
+        <div class="user-article" @keyup.enter="pushArticle(articleTitle, articleContent)">
+          <h3>Napisz swój własny artykuł</h3>
+          <br>
+          <label for="title">Tytuł</label>
+          <br>
+          <input type="text" v-model="articleTitle" id="title">
+          <br>
+          <label for="content">Tekst</label>
+          <br>
+          <input type="text" v-model="articleContent" id="content">
+          <button type="submit" @click="pushArticle(articleTitle, articleContent)" >Wyślij</button>
+      </div>
       <div class="post" v-for="post in posts">
         <h1>{{ post.title }}</h1>
         <h4>{{ post.date }}</h4>
         <div>{{ post.content }}</div>
       </div>
-      <div class="user-article" @keyup.enter="pushArticle(articleTitle, articleContent)">
-        Napisz swój własny artykuł
-        <label for="title">Tytuł</label>
-        <input type="text" v-model="articleTitle" id="title">
-        <label for="content">Tekst</label>
-        <input type="text" v-model="articleContent" id="content">
-        <button type="submit" @click="pushArticle(articleTitle, articleContent)" >Wyślij</button>
-      </div>    
+
     </div>
 
 
@@ -61,7 +66,7 @@ export default {
 .post {
   margin: 10px;
   padding: 10px;
-  text-transform: uppercase;
-  border: 1px dashed green;
+  
+  border: 2px dotted blue;
 }
 </style>

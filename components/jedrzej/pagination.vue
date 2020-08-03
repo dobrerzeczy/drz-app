@@ -11,3 +11,8 @@
     </nav>
     </div>
 </template>
+<style scoped>
+.pagination{
+  justify-content: center;
+}
+</style>
