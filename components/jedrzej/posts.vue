@@ -2,15 +2,19 @@
     <div>
         <div class="user-article" @keyup.enter="pushArticle(articleTitle, articleContent)">
           <h3>Napisz swój własny artykuł</h3>
+          <button @click="isShown++" v-if="isShown == 0">+</button>
+          <button @click="isShown--" v-if="isShown == 1">-</button>
           <br>
-          <label for="title">Tytuł</label>
-          <br>
-          <input type="text" v-model="articleTitle" id="title">
-          <br>
-          <label for="content">Tekst</label>
-          <br>
-          <input type="text" v-model="articleContent" id="content">
-          <button type="submit" @click="pushArticle(articleTitle, articleContent)" >Wyślij</button>
+          <div v-if="isShown">
+            <label for="title">Tytuł</label>
+            <br>
+            <input type="text" v-model="articleTitle" id="title">
+            <br>
+            <label for="content">Tekst</label>
+            <br>
+            <input type="text" v-model="articleContent" id="content">
+            <button type="submit" @click="pushArticle(articleTitle, articleContent)" >Wyślij</button>
+          </div>
       </div>
       <div class="post" v-for="post in posts">
         <h1>{{ post.title }}</h1>
@@ -43,7 +47,9 @@ export default {
         }],
             articleTitle: '',
             articleDate: '',
-            articleContent: ''
+            articleContent: '',
+            isShown: 0
+
         }
       },
           methods:{
