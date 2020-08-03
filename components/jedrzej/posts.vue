@@ -5,13 +5,13 @@
         <h4>{{ post.date }}</h4>
         <div>{{ post.content }}</div>
       </div>
-      <div class="user-article">
+      <div class="user-article" @keyup.enter="pushArticle(articleTitle, articleContent)">
         Napisz swój własny artykuł
         <label for="title">Tytuł</label>
         <input type="text" v-model="articleTitle" id="title">
         <label for="content">Tekst</label>
         <input type="text" v-model="articleContent" id="content">
-        <button type="submit" @click="pushArticle(articleTitle, articleContent)">Wyślij</button>
+        <button type="submit" @click="pushArticle(articleTitle, articleContent)" >Wyślij</button>
       </div>    
     </div>
 
@@ -49,8 +49,8 @@ export default {
 
             this.posts.push({title, date, content})
 
-            //this.articleTitle = ''
-            //this.articleContent = ''
+            this.articleTitle = ''
+            this.articleContent = ''
         }
     }
 
