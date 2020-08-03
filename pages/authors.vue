@@ -5,6 +5,7 @@
       <a href="/authors/tymox" class="btn btn-secondary">tymox</a>
       <a href="/authors/dvisyy" class="btn btn-secondary">dvisyy</a>
       <a href="/authors/chmura" class="btn btn-secondary">chmura</a>
+      <a href="/authors/jedrzej" class="btn btn-secondary">jedrzej</a>
     </div>
 
     <nav aria-label="breadcrumb">

@@ -50,6 +50,6 @@ export default {
     float: left;
     margin-left: 40%;
     padding: 40px;
-    width: 100% + 30px;
+    
   }
 </style>
