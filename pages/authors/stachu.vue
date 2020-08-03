@@ -11,8 +11,7 @@
                     <input type="text" name="contentPost" v-model="Content" />
 
                     <button id="sendPost" @click="addPost()" :disabled="addingpost">Wyslij</button>
-                    {{Title}}
-                    {{Content}}
+
                 </div>
             </div>
 
@@ -40,37 +39,27 @@ export default {
             addingpost: false,
             Title: '',
             Content: '',
-            posts: [
-                {
-                    title: `Pierwszy tytuł ;p`,
-                    content: `No dzien dobry.`,
-                    created: `1. Czerwca 2020`,
-                },
-                {
-                    title: `Drugi tytuł ;p`,
-                    content: `Siema`,
-                    created: `2. Czerwca 2020`,
-                },
-                {
-                    title: `Trzeci tytuł ;p`,
-                    content: `Czesc, dzien dobry, czolem, hah, tekst, pisze content postu`,
-                    created: `3. Czerwca 2020`,
-                },
-
-
-            ]
+            posts: [],
             
-
-
         };
         
     },
-
-    methods: {
-        mounted()
+    mounted()
         {
-            
+            app.get("/Posts").then((response) => {
+
+                console.log(response.data);
+
+                this.posts = response.data
+
+            }).catch((error) => {
+
+                console.log(error);
+
+            })
+
         },
+    methods: {
         showCreate()
         {
             
@@ -93,6 +82,7 @@ export default {
 
             this.addingpost = true;
             await app.post("/addPost", {Title, Content});
+
 
             
         },
