@@ -1,11 +1,17 @@
 const mongoose = require(`mongoose`);
 
 const postSchema = mongoose.Schema({
-    Post: {
+    Title: {
         type: String,
         required: true,
         
     },
+    Content: {
+        type: String,
+        required: true,
+        
+    },
+    Date,
 
 })
 

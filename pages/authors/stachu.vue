@@ -1,37 +1,45 @@
 <template>
     <div>
-        <form method="POST" action="http://localhost:3001/addPost">
+        <button id="addPost" @click="showCreate()">Utwórz posta!</button>
+            <div id="postcreate">
+                <div class="inputs">
 
-            <input type="text" name="newPost" v-model="Text" />
-            <button type="submit">Wyslij</button>
-            {{Text}}
-        </form>
+                    <label for="title">Tytuł posta</label>
+                    <input type="text" name="titlePost" v-model="Title" />
+
+                    <label for="content">Zawartość posta</label>
+                    <input type="text" name="contentPost" v-model="Content" />
+
+                    <button id="sendPost" @click="addPost()" :disabled="addingpost">Wyslij</button>
+                    {{Title}}
+                    {{Content}}
+                </div>
+            </div>
 
         <author-posts :posts-to-show="posts" />
 
-        <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-</nav>
+        <pagination />
 
     </div>
 </template>
 
 <script>
 import app from '~/service/stachu/api'
+import Pagination from '~/components/stachu/pagination'
 import AuthorPosts from '~/components/stachu/AuthorPosts';
+
 export default {
     components: {
         AuthorPosts,
+        Pagination,
     },
     data() {
         return {
-            Text: '',
+
+            showed: false,
+            addingpost: false,
+            Title: '',
+            Content: '',
             posts: [
                 {
                     title: `Pierwszy tytuł ;p`,
@@ -55,17 +63,59 @@ export default {
 
 
         };
+        
     },
-    methods:
-    {
+
+    methods: {
         mounted()
         {
             
-        }
+        },
+        showCreate()
+        {
+            
+            if(this.showed)
+            {
+                document.getElementById("postcreate").style.display = "none";
+                document.getElementById("addPost").innerHTML = "Utwórz posta!";
+                this.showed = false;
+            }
+            else if(!this.showed)
+            {
+                document.getElementById("postcreate").style.display = "inline";
+                document.getElementById("addPost").innerHTML = "Ukryj";
+                this.showed = true;
+            }
+        },
+        async addPost()
+        {
+            const {Title, Content} = this;
+
+            this.addingpost = true;
+            await app.post("/addPost", {Title, Content});
+
+            
+        },
     }
 }
 </script>
 
 <style>
-
+#postcreate
+{
+    display: none;
+    z-index: 10000;
+    width: 1110px;
+    height: 500px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.849);
+    border: black solid 1px;
+    position: absolute;
+    word-break: break-all;
+}
+.inputs
+{
+    margin-top: 20%;
+    margin-right: 2%;
+}
 </style>
