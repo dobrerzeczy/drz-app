@@ -1,5 +1,9 @@
 <template>
-    <div>{{ title }}</div>
+    <div>
+        {{ title }}
+        <input type="text" v-model="title">
+        </div>
+    
 </template>
 
 <script>
