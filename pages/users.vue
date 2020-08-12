@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <table style="width:100%">
+  <div class="wrapper">
+    <table >
       <tr>
         <th>Firstname</th>
         <th>Lastname</th>
@@ -48,11 +48,5 @@ export default {
 </script>
 
 <style scoped>
-table {
-  margin: 10px;
-}
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
+@import '~/styles/usersStyle.css'
 </style>
