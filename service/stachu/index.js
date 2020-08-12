@@ -3,6 +3,7 @@ require(`./mongoDB/mongoose`)
 const Post = require(`./mongodb/models/post`)
 const express = require(`express`);
 const bodyParser = require(`body-parser`);
+const cors = require('cors');
 
 
 const app = express();
@@ -10,6 +11,7 @@ const port = 3001;
 
 app.use(bodyParser());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cors());
 
 app.listen(port, (error) => {
     if(error)
@@ -30,7 +32,7 @@ app.post(`/addPost`, (req, res) => {
     if(req)
     {
         console.log(`ktos dodaje post!`)
-        Post.create({Post: req.body.newPost}, (err, result) => {
+        Post.create({Title: req.body.Title, Content: req.body.Content, Date: new Date().toLocaleString(),}, (err, result) =>{
             if(err)
             {
                 console.log(err);
