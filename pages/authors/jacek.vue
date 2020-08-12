@@ -1,0 +1,3 @@
+<template>
+    Strona Jacka
+</template>
