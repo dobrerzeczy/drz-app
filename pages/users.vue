@@ -11,7 +11,7 @@
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
         <td>{{user.age}}</td>
-        <td><button @click="deleteUser(user.username)"> skasuj </button></td>
+        <td><button @click="deleteUser(user.username)"> Skasuj </button></td>
       </tr>
     </table>
   </div>

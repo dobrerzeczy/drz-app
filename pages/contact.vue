@@ -8,7 +8,7 @@
     <!--Section heading-->
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
     <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">Masz jakieś pytaania? Napisz do naszego zespołu który postara ci się pomóc.
+    <p class="text-center w-responsive mx-auto mb-5">Masz jakieś pytania? Napisz do naszego zespołu który postara ci się pomóc.
         .</p>
 
     <div class="row">
