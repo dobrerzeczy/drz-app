@@ -1,3 +1,4 @@
 <template>
-    Strona Jacka
+    <div>"Strona Jacka"</div>
 </template>
+
