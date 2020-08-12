@@ -1,4 +1,13 @@
 <template>
-    <div>"Strona Jacka"</div>
+    <div>{{ title }}</div>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            title: 'Strona Jacka'
+        };
+    }
+}
+</script>
