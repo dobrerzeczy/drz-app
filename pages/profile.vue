@@ -1,20 +1,20 @@
 <template>
-    <div class="container">   
+    <div class="container">
         <div class="profile">
-            
+
             <div class="avatar">
-                
+
                 <div class="avatarimg"><img src=""></div>
-                    
+
             </div>
-            
+
             <div class="infobox">
                 <div class="tekst">
                     <div class="name"><h2>Firstname_Lastname</h2></div>
-                    <div class="age"><h4>Age</h4></div>              
-                    
+                    <div class="age"><h4>Age</h4></div>
+
                 </div>
-                
+
             </div>
 
             <div class="infobox2">
@@ -35,14 +35,11 @@
         </div>
     </div>
 </template>
-
 <script>
 export default {
   middleware: 'auth'
-
 }
 </script>
-
 <style>
 
 .container
@@ -57,8 +54,8 @@ export default {
 }
 .profile
 {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .avatar
@@ -72,9 +69,9 @@ export default {
 
 .infobox
 {
-
-  padding: 2%;
-  height: 50%;
+    display: flex;
+    padding: 2%;
+    height: 50%;
 }
 .infobox2
 {
