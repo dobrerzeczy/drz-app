@@ -4,7 +4,7 @@
             
             <div class="avatar">
                 
-                <div class="avatarimg"><h1>AVATAR</h1></div>
+                <div class="avatarimg"><img src=""></div>
                     
             </div>
             
