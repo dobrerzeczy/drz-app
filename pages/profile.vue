@@ -1,11 +1,11 @@
 <template>
-    <div class="container">
+    <div class="container">   
         <div class="profile">
-
+            
             <div class="avatar">
 
                 <div class="avatarimg" :class="{ dragging }" @dragenter="dragging = true" @dragend="dragging = false" @drop.prevent="handleDrop">
-                    <img v-if="avatarUrl" :src="avatarUrl" />
+                    <img v-if="true" src='~/assets/avatar.jpg' />
                     <div v-else>
                         <span v-if="dragging">DROP IT LIKE ITS HOT</span>
                         <span v-else>drop your avatar here
@@ -14,28 +14,24 @@
                 </div>
 
             </div>
-
+            
             <div class="infobox">
                 <div class="tekst">
                     <div class="name"><h2>Firstname_Lastname</h2></div>
-                    <div class="age"><h4>Age</h4></div>
-
+                    <div class="age"><h4>Age</h4></div>              
+                    
                 </div>
-
+                
             </div>
 
             <div class="infobox2">
                 <div class="tekst">
+
+
+                    
                     nic.
                     nic.
                     nic.
-
-
-
-
-
-
-
                 </div>
             </div>
 
@@ -90,6 +86,12 @@ export default {
     float: left;
 }
 
+.avatarimg img
+{
+    width: 100%;
+    height: 100%;
+}
+
 .infobox
 {
     display: flex;
@@ -114,7 +116,7 @@ export default {
 }
 .avatarimg
 {
-    padding: 5px;
+    
     height: 100%;
     width: 100%;
     border: black solid 3px;
