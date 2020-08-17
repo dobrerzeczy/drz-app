@@ -4,64 +4,79 @@
             
             <div class="avatar">
                 
-                <div class="avatarimg"><h1>AVATAR</h1></div>
+                <div class="avatarimg"><img src=""></div>
                     
             </div>
             
-            <div class="info">
-
-                <div class="tekst"><h1>NAZWAPROFILU</h1></div>
+            <div class="infobox">
+                <div class="tekst">
+                    <div class="name"><h2>Firstname_Lastname</h2></div>
+                    <div class="age"><h4>Age</h4></div>              
+                    
+                </div>
                 
             </div>
 
-            <div class="info2">
+            <div class="infobox2">
+                <div class="tekst">
+                    nic.
+                    nic.
+                    nic.
 
-                <div class="tekst">tekst tekst tekst</div>
 
+
+
+
+
+
+                </div>
             </div>
 
         </div>
     </div>
 </template>
 
-<style>
-html
-{
-    background-color: rgb(255, 255, 255);
+<script>
+export default {
+  middleware: 'auth'
 
 }
+</script>
+
+<style>
+
 .container
 {
     background-color: lightblue;
     padding: 5px;
     display: flexbox;
     border: black solid 4px;
-    margin: 5%;
+    margin: 5% auto 5% auto;
     width: 90%;
     height: 800px;
 }
 .profile
 {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .avatar
 {
     display: flex;
     height: 50%;
-    width: 25%;
+    width: 35%;
     padding: 2%;
     float: left;
 }
 
-.info
+.infobox
 {
-    display: flex;
-    padding: 2%;
-    height: 50%;
+
+  padding: 2%;
+  height: 50%;
 }
-.info2
+.infobox2
 {
     display: flex;
     padding: 2%;
@@ -69,6 +84,7 @@ html
 }
 .tekst
 {
+    word-wrap: break-word;
     padding: 5px;
     border: black solid 3px;
     height: 100%;

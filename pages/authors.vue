@@ -7,6 +7,7 @@
       <a href="/authors/chmura" class="btn btn-secondary">chmura</a>
       <a href="/authors/jedrzej" class="btn btn-secondary">jedrzej</a>
       <a href="/authors/jacek" class="btn btn-secondary">jacek</a>
+      <a href="/authors/igor" class="btn btn-secondary">igor</a>
     </div>
 
     <nav aria-label="breadcrumb">
@@ -23,8 +24,7 @@
 
 <script>
 export default {
-  
+
 }
 
 </script>
-
