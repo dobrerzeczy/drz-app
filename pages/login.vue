@@ -31,9 +31,10 @@ export default {
       1. button disabled
       2. sign in -> signing in
        */
-      const { data } = await api.post('/login', {username, password});
+      // const { data } = await api.post('/login', {username, password});
+      let response = await this.$auth.loginWith('local', { data: { username, password } })
 
-      console.log(data);
+      console.log(response);
 
       this.loggingIn = false;
 
