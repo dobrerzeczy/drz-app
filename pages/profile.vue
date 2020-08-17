@@ -4,7 +4,7 @@
             
             <div class="avatar">
                 
-                <div class="avatarimg"><img src=""></div>
+                <div class="avatarimg"><img alt="loading..." src="~/assets/avatar.jpg"></div>
                     
             </div>
             
@@ -19,16 +19,12 @@
 
             <div class="infobox2">
                 <div class="tekst">
+
+
+        
                     nic.
                     nic.
                     nic.
-
-
-
-
-
-
-
                 </div>
             </div>
 
@@ -63,6 +59,12 @@
     float: left;
 }
 
+.avatarimg img
+{
+    width: 100%;
+    height: 100%;
+}
+
 .infobox
 {
     display: flex;
@@ -87,7 +89,7 @@
 }
 .avatarimg
 {
-    padding: 5px;
+    
     height: 100%;
     width: 100%;
     border: black solid 3px;
