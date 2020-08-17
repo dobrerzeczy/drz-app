@@ -1,14 +1,15 @@
 <template>
     <div>
         <div class="post" v-for="post in postsToShow">
-            <h1>{{post.title}}</h1>
-            <h4>{{post.created}}</h4>
-            <div>{{post.content}}</div>
+            <h1>{{post.Title}}</h1>
+            <h4>{{post.Date}}</h4>
+            <div>{{post.Content}}</div>
         </div>    
     </div>
 </template>
 
 <script>
+import app from '~/service/stachu/api'
 export default {
     props:
     {
@@ -16,7 +17,7 @@ export default {
             type: Array,
             required: true,
         }
-    }
+    },
 }
 </script>
 

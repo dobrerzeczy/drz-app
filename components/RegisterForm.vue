@@ -24,10 +24,13 @@
         <br>
         <input type="password" id="inputConfirmPassword" name="inputConfirmPassword" placeholder="Confirm password" v-model="confirmPassword">
         <br>
+        
+        <p v-if="wrongPassword">{{wrongPassword}}</p>
+
     <button @click="handleRegister" :disabled='isDisabled(password, username, confirmPassword, age, firstName, lastName)' 
     :class="{ disabledButton: isDisabled(password, username, confirmPassword, age, firstName, lastName)}" >
-        <p v-if="!loggingIn" >Sign In</p>
-        <p v-if="loggingIn">Signing In</p>
+        <p v-if="!loggingIn" >Sign Up</p>
+        <p v-if="loggingIn">Signing Up</p>
     </button>
         {{wrongPassword}}
     </div>
@@ -67,18 +70,24 @@ export default {
         },
           isDisabled (password, username, confirmPassword, age, firstName, lastName){
           return password != confirmPassword || password == "" || username == "" || age == "" || firstName == "" || lastName == "" ;
-      }
+        },
+        
     },
+    
+    
 }
 </script>
 <style scoped>
     div{
         background-color: rgb(212, 212, 212);
         width: 240px;
-        height: 290px;
+        height: 460px;
     }
+
     button{
+        position: relative;
         border-color: green;
+        top: 20px;
     }
     .disabledButton{
         border-color: rgb(255, 0, 0);
