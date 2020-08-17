@@ -39,14 +39,14 @@ html
 }
 .container
 {
+
     background-color: lightblue;
     padding: 5px;
     display: flexbox;
     border: black solid 4px;
-    margin: 0;
-    width: 100%;
-    height: 800px;
-   float: center;
+    margin: 5% auto 5% auto;
+    width: 90%;
+    height: 700px;
 }
 .profile
 {
@@ -56,11 +56,11 @@ html
 
 .avatar
 {
-  display: flex;
-  height: 50%;
-  width: 25%;
-  padding: 2%;
-  float: left;
+    display: flex;
+    height: 50%;
+    width: 30%;
+    padding: 2%;
+    float: left;
 }
 
 .profileName
