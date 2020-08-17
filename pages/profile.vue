@@ -4,7 +4,14 @@
 
             <div class="avatar">
 
-                <div class="avatarimg"><img src=""></div>
+                <div class="avatarimg" :class="{ dragging }" @dragenter="dragging = true" @dragend="dragging = false" @drop.prevent="handleDrop">
+                    <img v-if="avatarUrl" :src="avatarUrl" />
+                    <div v-else>
+                        <span v-if="dragging">DROP IT LIKE ITS HOT</span>
+                        <span v-else>drop your avatar here
+                        to update it</span>
+                    </div>
+                </div>
 
             </div>
 
@@ -37,7 +44,23 @@
 </template>
 <script>
 export default {
-  middleware: 'auth'
+//   middleware: 'auth'
+
+    data() {
+        return {
+            avatarUrl: '',
+            dragging: false
+        }
+    },
+
+    methods: {
+        handleDrop(event) {
+            event.preventDefault();
+            event.stopPropagation()
+            this.dragging = false;
+            console.log(event)
+        }
+    }
 }
 </script>
 <style>
@@ -98,8 +121,14 @@ export default {
 
     background-color: white;
 
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.avatarimg.dragging {
+    border: 10px dashed green;
+}
 
 
 </style>
