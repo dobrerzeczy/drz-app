@@ -8,7 +8,7 @@
                     
             </div>
             
-            <div class="info">
+            <div class="profileName">
 
                 <div class="tekst"><h1>NAZWAPROFILU</h1></div>
                 
@@ -24,6 +24,13 @@
     </div>
 </template>
 
+<script>
+export default {
+  middleware: 'auth'
+
+}
+</script>
+
 <style>
 html
 {
@@ -36,30 +43,31 @@ html
     padding: 5px;
     display: flexbox;
     border: black solid 4px;
-    margin: 5%;
-    width: 90%;
+    margin: 0;
+    width: 100%;
     height: 800px;
+   float: center;
 }
 .profile
 {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .avatar
 {
-    display: flex;
-    height: 50%;
-    width: 25%;
-    padding: 2%;
-    float: left;
+  display: flex;
+  height: 50%;
+  width: 25%;
+  padding: 2%;
+  float: left;
 }
 
-.info
+.profileName
 {
-    display: flex;
-    padding: 2%;
-    height: 50%;
+
+  padding: 2%;
+  height: 50%;
 }
 .info2
 {
