@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="loginForm">
         <login-form @loginData='addLoginData($event)' :logging-in="loggingIn"/>
         {{username}}
         {{password}}
@@ -44,3 +44,12 @@ export default {
   
 }
 </script>
+<style scoped>
+  .loginForm{
+    text-align: center;
+    float: left;
+    margin-left: 40%;
+    padding: 40px;
+    
+  }
+</style>

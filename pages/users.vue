@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper">
-    <table >
+  <div>
+    <table style="width:100%">
       <tr>
         <th>Firstname</th>
         <th>Lastname</th>
@@ -11,7 +11,6 @@
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
         <td>{{user.age}}</td>
-        <td><button @click="deleteUser(user.username)"> Skasuj </button></td>
       </tr>
     </table>
   </div>
@@ -48,5 +47,11 @@ export default {
 </script>
 
 <style scoped>
-@import '~/styles/usersStyle.css'
+table {
+  margin: 10px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 </style>
