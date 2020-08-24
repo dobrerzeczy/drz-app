@@ -4,8 +4,9 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
-      <th scope="col">Second</th>
-      <th scope="col">Third</th>
+      <th scope="col">Last</th>
+      <th scope="col">Auto</th>
+      <th scope="col">Time</th>
     </tr>
   </thead>
   <tbody>
