@@ -1,5 +1,5 @@
 <template>
-<img src="~/assets/logo.png" alt="">
+  <img src="~/assets/logo.png" alt="">
 </template>
 
 <style>
@@ -14,3 +14,4 @@
   }
 }
 </style>
+

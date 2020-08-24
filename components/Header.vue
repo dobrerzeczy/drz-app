@@ -1,6 +1,6 @@
 <template>
     <div style="display: flex; padding: 20px">
-         <logo style="width: 50px"/>
+        <a href="../login"><logo style="width: 50px"/></a>
         <div style="flex: 1;" /> 
         <drz-menu/>
         <a href="../login"><div style="margin-left: 20px">LOGIN</div></a>
@@ -17,4 +17,4 @@ export default {
         DrzMenu
     }
 }
-</script>
+</script> 
