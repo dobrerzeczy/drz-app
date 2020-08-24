@@ -2,7 +2,7 @@
     <div>
         {{ title }}
         <input type="text" v-model="title">
-        <scores />
+        <scores :scores="scores" />
         </div>
     
 </template>
@@ -16,8 +16,29 @@ export default {
     },
     data() {
         return {
-            title: 'v-model'
-        };
+            scores: [
+                {
+                    index: '1',
+                    first: 'Jan',
+                    last: 'Kowalski',
+                    auto: 'BMW',
+                    time: '2min 5s'
+                }, {
+                    index: '2',
+                    first: 'Adrian',
+                    last: 'Kowalski',
+                    auto: 'AUDI',
+                    time: '2min 10s',
+                }, {
+                    index: '3',
+                    first: 'Wincenty',
+                    last: 'Kowalski',
+                    auto: 'CITROEN',
+                    time: '1min 5s',
+                }
+                
+            ]
+        }
     }
 }
 </script>
