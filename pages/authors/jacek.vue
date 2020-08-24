@@ -19,21 +19,21 @@ export default {
             scores: [
                 {
                     index: '1',
-                    first: 'Jan',
-                    last: 'Kowalski',
-                    auto: 'BMW',
+                    first: 'John',
+                    last: 'Gun',
+                    car: 'BMW',
                     time: '2min 5s'
                 }, {
                     index: '2',
-                    first: 'Adrian',
-                    last: 'Kowalski',
-                    auto: 'AUDI',
+                    first: 'Adi',
+                    last: 'Bang',
+                    car: 'AUDI',
                     time: '2min 10s',
                 }, {
                     index: '3',
-                    first: 'Wincenty',
-                    last: 'Kowalski',
-                    auto: 'CITROEN',
+                    first: 'Mark',
+                    last: 'Kowalsky',
+                    car: 'CITROEN',
                     time: '1min 5s',
                 }
                 
