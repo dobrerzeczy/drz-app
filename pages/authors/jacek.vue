@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import pagination from "~/components/jacek/Scores.vue"
 export default {
     data() {
         return {
