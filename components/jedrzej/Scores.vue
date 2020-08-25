@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="person in people">
+      <tr v-for="person in people" :key="person">
         <td>{{person.name}}</td>
         <td>{{person.car}}</td>
         <td>{{person.time}}</td>
@@ -31,6 +31,8 @@
 export default {
   data(){
     return{
+      asc: true,
+      desc: false,
       people:[
         {
           name: 'Jan Kowalski',
@@ -57,11 +59,24 @@ export default {
   },
   methods:{
       sortTable(column){
-        this.people.sort(function(a,b){
-          if(a[column] > b[column])return 1
-          if(a[column] < b[column])return -1
-          else return 0
-        })
+        if(this.asc == true){
+          this.asc = false
+          this.desc = true
+          this.people.sort(function(a,b){
+            if(a[column] > b[column])return 1
+            if(a[column] < b[column])return -1
+            else return 0
+          })
+        }
+        else{
+          this.desc = false
+          this.asc = true
+          this.people.sort(function(a,b){
+            if(a[column] > b[column])return -1
+            if(a[column] < b[column])return 1
+            else return 0
+          })
+        }
       }
   }
 }
