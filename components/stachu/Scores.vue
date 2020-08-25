@@ -18,7 +18,7 @@
                 <td>{{uczestnik.nazwisko}}</td>
                 <td>{{uczestnik.samochod}}</td>
                 <td>{{uczestnik.czas}}</td>
-                <td><button onclick="alert(`Nie dziala`)">Usun</button></td>
+                <td><button @click="deleteValue()">Usun</button></td>
             </tr>
         </tbody>
         </table>
@@ -65,7 +65,10 @@ export default {
     methods:
     {
 
-
+        deleteValue()
+        {
+            this.uczestnik = ""
+        },
         sortTable(column){
             if(this.sorttableby == "asc" || this.sorttableby == "default")
             {
