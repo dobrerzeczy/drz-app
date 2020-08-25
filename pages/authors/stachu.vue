@@ -18,12 +18,13 @@
         <author-posts :posts-to-show="posts" />
 
         <pagination />
-
+        <scores />
     </div>
 </template>
 
 <script>
 import app from '~/service/stachu/api'
+import Scores from '~/components/stachu/Scores'
 import Pagination from '~/components/stachu/pagination'
 import AuthorPosts from '~/components/stachu/AuthorPosts';
 
