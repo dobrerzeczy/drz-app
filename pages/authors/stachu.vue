@@ -50,7 +50,6 @@ export default {
         {
             app.get("/Posts").then((response) => {
 
-                console.log(response.data);
 
                 this.posts = response.data
 
