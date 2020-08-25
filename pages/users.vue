@@ -11,6 +11,7 @@
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
         <td>{{user.age}}</td>
+        <td><button>Delete</button></td>
       </tr>
     </table>
   </div>
@@ -48,7 +49,7 @@ export default {
 
 <style scoped>
 table {
-  margin: 10px;
+  /* margin: 10px; */
 }
 table, th, td {
   border: 1px solid black;
