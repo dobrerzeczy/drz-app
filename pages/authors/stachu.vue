@@ -80,13 +80,11 @@ export default {
         },
         async addPost()
         {
+            location.reload();
             const {Title, Content} = this;
 
             this.addingpost = true;
             await app.post("/addPost", {Title, Content});
-
-
-            
         },
     }
 }

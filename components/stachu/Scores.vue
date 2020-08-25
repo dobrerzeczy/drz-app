@@ -1,7 +1,7 @@
 <template>
     <div>
         
-        <table class="table table-striped table-dark">
+        <table class="table table-striped table-dark table-hover">
         <thead>
             <tr>
             <th scope="col" class="column" @click="sortTable('numer')">#</th>
@@ -18,6 +18,7 @@
                 <td>{{uczestnik.nazwisko}}</td>
                 <td>{{uczestnik.samochod}}</td>
                 <td>{{uczestnik.czas}}</td>
+                <td><button onclick="alert(`Nie dziala`)">Usun</button></td>
             </tr>
         </tbody>
         </table>
@@ -223,7 +224,16 @@ export default {
     cursor: pointer;
     
 }
+.column:active
+{
+    background-color: gray;
 
+}
+
+.table
+{
+    text-align: center;
+}
 </style>
 
 
