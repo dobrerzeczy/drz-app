@@ -24,6 +24,7 @@
 
 
 <script>
+import Scores from '~/components/tymox/Scores';
 import AuthorPosts from '~/components/tymox/AuthorPosts';
 
 export default {

@@ -18,19 +18,21 @@
         <author-posts :posts-to-show="posts" />
 
         <pagination />
-
+        <scores />
     </div>
 </template>
 
 <script>
-import app from '~/service/stachu/api'
-import Pagination from '~/components/stachu/pagination'
+import app from '~/service/stachu/api';
+import Scores from '~/components/stachu/Scores';
+import Pagination from '~/components/stachu/pagination';
 import AuthorPosts from '~/components/stachu/AuthorPosts';
 
 export default {
     components: {
         AuthorPosts,
         Pagination,
+        Scores,
     },
     data() {
         return {
@@ -48,7 +50,6 @@ export default {
         {
             app.get("/Posts").then((response) => {
 
-                console.log(response.data);
 
                 this.posts = response.data
 
@@ -78,13 +79,11 @@ export default {
         },
         async addPost()
         {
+            location.reload();
             const {Title, Content} = this;
 
             this.addingpost = true;
             await app.post("/addPost", {Title, Content});
-
-
-            
         },
     }
 }

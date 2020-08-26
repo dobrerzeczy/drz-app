@@ -1,36 +1,37 @@
 <template>
-<table class="table">
+<table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Auto</th>
-      <th scope="col">Time</th>
+      <th  @click="sortTable('index')" scope="col">Pos</th>
+      <th @click="sortTable('first name')" scope="col">First Name</th>
+      <th @click="sortTable('last name')" scope="col">Last Name</th>
+      <th @click="sortTable('car')" scope="col">Car</th>
+      <th @click="sortTable('time')" scope="col">Time</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Jan</td>
-      <td>Kowalski</td>
-      <td>BMW</td>
-      <td>2min 5s</td>
+    <tr v-for="(score) in scores">
+      <th scope="row">{{score.index}}</th>
+      <td> {{score.first}} </td>
+      <td> {{score.last}} </td>
+      <td> {{score.car}} </td>
+      <td> {{score.time}} </td> 
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Adrian</td>
-      <td>Kowalski</td>
-      <td>AUDI</td>
-      <td>2min 10s</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Wincenty</td>
-      <td>Kowalski</td>
-      <td>CITROEN</td>
-      <td>1min 5s</td>
-    </tr>
+    
   </tbody>
 </table>
 </template>
+<script>
+export default {
+    props: {
+        scores:{
+            type: Array,
+        }
+    },
+    methods: {
+        sortTable(column) {
+            this.scores.sort((a, b) => a[column].localeCompare(b[column]));
+        }
+    }
+}
+</script>

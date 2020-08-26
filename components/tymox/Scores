@@ -1,5 +1,5 @@
 <template>
-<table class="table table-striped table-dark">
+<table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -11,6 +11,9 @@
   <tbody>
     <tr class='clickable-row' data-href='localhost:3000'>
         <td></td> <td></td> <td></td>
+<th><button @click="sortTable('name')">Imię i nazwisko</button></th>
+        <th><button @click="sortTable('car')">Samochód</button></th>
+        <th><button @click="sortTable('time')">Czas</button></th>
     </tr>
     <tr>
       <th scope="row">1</th>
@@ -29,6 +32,17 @@
       <td>BMW</td>
       <td>Audi</td>
       <td>Citroen</td>
+      sortTable(column){
+        this.people.sort(function(a,b){
+          if(a[column] > b[column])return 1
+          if(a[column]  b[column])return -1
+          else return 0
+        })
+      }
+<th><button @click="sortTable('name')">Imię i nazwisko</button></th>
+        <th><button @click="sortTable('car')">Samochód</button></th>
+        <th><button @click="sortTable('time')">Czas</button></th>
     </tr>
   </tbody>
 </table>
+</template>

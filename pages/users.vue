@@ -19,8 +19,12 @@
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
         <td>{{user.age}}</td>
+<<<<<<< HEAD
         <td><button @click="deleteUser(user.username)"> Skasuj </button></td> 
         
+=======
+        <td><button>Delete</button></td>
+>>>>>>> 6d7339880badf35bffe9d30028fc13a0fe584bb7
       </tr>
 
       </tbody>
@@ -60,5 +64,15 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 @import '~/styles/usersStyle.css'
+=======
+table {
+  /* margin: 10px; */
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+>>>>>>> 6d7339880badf35bffe9d30028fc13a0fe584bb7
 </style>

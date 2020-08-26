@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="post" v-for= "post in postsToShow"> 
+        <div class="post" v-for= "post in postsToShow">
             <h1>{{post.title}}</h1>
             <h4>{{post.created}}</h4>
             <div>{{post.content}}</div>
